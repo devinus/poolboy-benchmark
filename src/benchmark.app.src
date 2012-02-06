@@ -1,0 +1,15 @@
+{application, benchmark, [
+  {description, "A super flawed Poolboy benchmark"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {mod, {benchmark, []}},
+  {env, [
+    {pools, [
+        {pool1, [
+            {size, 500},
+            {max_overflow, 500}
+        ]}
+    ]}
+  ]}
+]}.
